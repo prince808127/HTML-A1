@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Day1 Interview Question</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Difference between flex row and column</h1>
+    <h4>Flex row</h4>
+    <ol>
+        <li>This is the default value.</li>
+        <li>The main axis runs horizontally, from left to right (or right to left in row-reverse).</li>
+        <li>Flex items are arranged side-by-side, like a row of text.</li>
+        <li>The cross axis runs vertically, perpendicular to the main axis.</li>
+    </ol>
+    <h4>flex column</h4>
+    <ol>
+     <li>The main axis runs vertically, from top to bottom (or bottom to top in column-reverse).<li>
+    <li>Flex items are arranged stacked vertically, like a column of elements.</li>
+<li>The cross axis runs horizontally, perpendicular to the main axis.</li>
+    </ol>
+    <h1>Explain inline , internal and external stylesheet</h1>
+    <p>inline</p>
+    <fieldset>
+        In programming, "inline" refers to the compiler directly inserting a function's code into the calling code instead of performing a traditional function call, which improves performance by eliminating function call overhead. In HTML and web development, "inline" elements (like <span>) are those that do not start on a new line and only take up the necessary width, contrasting with block-level elements. 
+    </fieldset>
+    <p>internal stylesheet</p>
+    <fieldset>
+        <pre>An internal style sheet, also known as embedded CSS, is a method of applying CSS styles directly within a single HTML document. The CSS rules are placed within a style element, which is located inside the head section of the HTML file.
+
+
+
+Key characteristics of internal style sheets:
+
+
+Location:
+
+The style tags and their enclosed CSS rules are placed within the head section of the HTML document.
+Scope:
+Styles defined in an internal style sheet only apply to the specific HTML document in which they are embedded. They do not affect other pages on a website.
+Syntax:
+Standard CSS syntax is used within the style tags, allowing for the styling of elements, classes, and IDs within that particular page.
+
+Use cases:
+
+Internal style sheets are primarily beneficial for:
+Single-page HTML documents:
+When a website consists of only one page or when specific styling is required for a unique page without affecting the rest of the site.
+Content management systems (CMS) limitations:
+In situations where direct modification of external CSS files is restricted, internal style sheets can be used to apply page-specific styles.
+Quick styling adjustments:
+For making rapid styling changes to a single page during development or testing.
+
+Limitations:
+
+For websites with multiple pages requiring consistent styling, internal style sheets are less efficient than external style sheets because the CSS code must be duplicated in each HTML file, leading to potential maintenance difficulties.
+</pre>
+    </fieldset>
+    <p>external stylesheet</p>
+    <fieldset>
+        An external stylesheet is a separate file containing Cascading Style Sheet (CSS) rules, used to define the visual presentation of one or more HTML web pages. This method separates the styling information from the HTML content, promoting better organization, reusability, and easier maintenance of web projects.
+    </fieldset>
+    <h1>Justify-content allows you to do what?</h1>
+    <p>The CSS justify-content property aligns items along the main axis of a flex or grid container, controlling how space is distributed between and around them. It allows you to pack items to the start or end of the container, center them, or distribute the remaining space evenly between, around, or with equal space before and after.
+</p>
+<fieldset>
+    <pre>
+        How justify-content works
+Sets alignment on the main axis:
+In a default flex container (flex-direction: row), the main axis is the horizontal axis. In a grid container, it's the inline axis. 
+Distributes space:
+It handles how leftover space within the container is distributed among items. 
+Common values:
+1- flex-start: Items are packed toward the start of the container. 
+2- flex-end: Items are packed toward the end of the container. 
+3- center: Items are centered within the container. 
+4- space-between: Items are evenly distributed, with space only between them. 
+5- space-around: Items are evenly distributed with equal space around them. 
+6- space-evenly: Distributes space equally between, before, and after each item. 
+Example
+To center items horizontally in a flex container:
+    </pre>
+</fieldset>
+<h1>Difference between absolute and relative positioning</h1>
+<fieldset>
+    <pre>Absolute positioning takes an element out of the document's normal flow and positions it relative to its nearest positioned ancestor or the entire document, while relative positioning modifies an element's position within the normal document flow without taking it out, maintaining its original space but allowing it to be offset from its default location. Key differences include their reference points (positioned ancestor vs. normal position), impact on document flow (removed vs. maintained), and how they reserve space (no space reserved vs. original space reserved).
+ 
+Here are five key differences between absolute and relative positioning: 
+1. Reference Point: 
+Absolute: Positions an element relative to its nearest "positioned" ancestor (an element with position: relative, absolute, fixed, or sticky) or, if no such ancestor exists, relative to the HTML element (the page itself). 
+Relative: Positions an element relative to its own normal position in the document flow. 
+2. Document Flow:
+Absolute: The element is removed from the normal document flow. 
+Relative: The element remains within the normal document flow. 
+3. Space Reservation:
+Absolute: Because the element is removed from the flow, it does not reserve its original space, and other elements will move into that space as if the element wasn't there. 
+Relative: The element, even when offset, still occupies its original space in the document, preventing other elements from moving into it. 
+4. Effect of top, right, bottom, left Properties:
+Absolute: These properties define the exact location of the element within the document or its positioned parent's coordinate system. 
+Relative: These properties define an offset from the element's default position within the normal flow, effectively "moving" the element without changing its space. 
+5. Parent-Child Relationships: 
+Absolute: An absolutely positioned element will position itself relative to the nearest positioned parent element. 
+Relative: A relatively positioned element creates its own coordinate system at its normal location but is not used as a positioning reference for its children in the same way an absolutely positioned element's parent is</pre>
+</fieldset>
+<h2>What is the z-index in CSS?</h2>
+<fieldset>
+    <pre>
+        The z-index property in CSS controls the stacking order of positioned elements along the z-axis, which is the imaginary axis perpendicular to the screen. It determines which elements appear in front of or behind other overlapping elements on a webpage. 
+
+
+Key aspects of z-index:
+
+Applies to positioned elements:
+
+z-index only affects elements that have a position value other than static (e.g., relative, absolute, fixed, or sticky). 
+
+Numerical values:
+
+z-index accepts integer values (positive, negative, or zero). A higher z-index value places an element in front of elements with lower z-index values within the same stacking context. 
+
+Default behavior:
+
+Without z-index, the stacking order of overlapping elements is determined by their order in the HTML source code; elements appearing later in the code are displayed on top.
+
+Negative values:
+
+Negative z-index values can be used to place an element behind its parent element or other elements within its stacking context.
+
+Stacking contexts:
+
+z-index operates within the concept of "stacking contexts." A stacking context is formed by elements with certain CSS properties, such as a position value other than static and a z-index value, or elements with properties like opacity, transform, or filter. Elements within a stacking context are stacked relative to each other, and the stacking context itself behaves as a single unit when stacked against other stacking contexts.
+    </pre>
+</fieldset>
+<h1>What is the difference between padding and margin?</h1>
+<fieldset>
+    <pre>
+        Padding vs Margin  What's the Difference?
+        
+        
+        - Shiksha OnlineIn CSS, both padding and margin create space around an element, but they do so in different ways. Padding creates space inside an element, between the content and the border, while margin creates space outside the element, between the element and other elements or the edge of the container. 
+
+Here's a more detailed breakdown:
+
+Padding:
+
+
+1- Purpose: To create space between the content of an element and its border. 
+2- Location: Inside the element's border. 
+3-0 Effect: Pushes the content of the element further away from the border. 
+4-Example: If you have a paragraph with padding, the text will have extra space around it, before reaching the paragraph's border. 
+
+
+Margin:
+
+Purpose:
+1- To create space around the outside of an element, separating it from other elements or the edge of the container. 
+
+Location:
+Outside the element's border. 
+
+Effect:
+
+Pushes the element further away from other elements or the edge of the container. 
+
+Example:
+
+If you have a div with a margin, it will be further away from other divs around it, or from the edge of the page if it's a top-level element. 
+Key Differences Summarized:
+a- Feature
+b- Padding
+c- Margin
+d- Location
+e-Inside the border
+f-Outside the border
+g- Purpose
+h-Space around content
+i- Space around the element
+j- Effect on Background
+k- Background color of the element extends into the padding
+l- Background color stops at the border; margin is transparent
+
+Example
+
+Pushes text away from the border
+Pushes the entire element away from other elements
+    </pre>
+</fieldset>
+</body>
+</html>
